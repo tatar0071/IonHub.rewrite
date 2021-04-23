@@ -171,13 +171,13 @@ local library = {
     },
     theme = {
         buttons = Color3.fromRGB(20, 200, 20), -- toggle, sliders colors
-        text = Color3.fromRGB(235, 235, 235),
-        textboxtext = Color3.fromRGB(145, 145, 145),
-        main = Color3.fromRGB(30, 30, 30),
-        outline = Color3.fromRGB(60, 60, 60),
-        tabholder = Color3.fromRGB(35, 35, 35),
-        tabbutton = Color3.fromRGB(30, 30, 30),
-        tabselected = Color3.fromRGB(50, 50, 50)
+        text = Color3.fromRGB(255, 255, 255),
+        textboxtext = Color3.fromRGB(110, 110, 110),
+        main = Color3.fromRGB(20, 20, 20),
+        outline = Color3.fromRGB(40, 40, 40),
+        tabholder = Color3.fromRGB(25, 25, 25),
+        tabbutton = Color3.fromRGB(15, 15, 15),
+        tabselected = Color3.fromRGB(30, 30, 30)
     }
 }
 
