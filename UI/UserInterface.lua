@@ -390,12 +390,12 @@ function library:CreateWindow(csize, cpos)
 	local window = {xpos = 0, close = true, draggable = true}
 	table.insert(self.windows, window)
 	
-	local gui = Instance.new("ScreenGui")
+	local sgui = Instance.new("ScreenGui")
 	syn.protect_gui(gui)
-	gui.Name = library.settings.guiname
-	gui.Parent = game.CoreGui
+	sgui.Name = library.settings.guiname
+	sgui.Parent = game.CoreGui
 	
-	self.base = self.base or gui
+	self.base = self.base or sgui
 
 	self.pointer = self.pointer or self:create("ImageLabel", {
 		ZIndex = 100,
