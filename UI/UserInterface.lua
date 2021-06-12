@@ -390,6 +390,7 @@ function library:CreateWindow(csize, cpos)
 	local window = {xpos = 0, close = true, draggable = true}
 	table.insert(self.windows, window)
 	
+	--epic coregui detection fix by tatar0071#0627
 	local sgui = Instance.new("ScreenGui")
 	syn.protect_gui(sgui)
 	sgui.Name = library.settings.guiname
