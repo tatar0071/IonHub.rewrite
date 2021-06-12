@@ -392,10 +392,11 @@ function library:CreateWindow(csize, cpos)
 	
 	self.base = self.base or self:create("ScreenGui", {
 		Name = library.settings.guiname,
-		Parent = game.CoreGui
 	})
 	
 	syn.protect_gui(self.base)
+	
+	self.base.Parent = game.CoreGui
 
 	self.pointer = self.pointer or self:create("ImageLabel", {
 		ZIndex = 100,
