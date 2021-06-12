@@ -391,7 +391,7 @@ function library:CreateWindow(csize, cpos)
 	table.insert(self.windows, window)
 	
 	local sgui = Instance.new("ScreenGui")
-	syn.protect_gui(gui)
+	syn.protect_gui(sgui)
 	sgui.Name = library.settings.guiname
 	sgui.Parent = game.CoreGui
 	
