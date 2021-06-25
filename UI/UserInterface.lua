@@ -161,8 +161,8 @@ local library = {
     pointers = {},
     settings = {
         guiname = "IonHub",
-		title = "IonHub v3 - Dust | build: 20210423",
-		logo = "rbxassetid://4350178803", -- "http://www.roblox.com/asset/?id=6597976562",
+		title = "",
+		logo = "", -- "http://www.roblox.com/asset/?id=6597976562",
         footer = " coded by tatar0071#0627",
         modal = true,
         font = Enum.Font.SourceSans,
