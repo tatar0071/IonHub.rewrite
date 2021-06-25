@@ -1,5 +1,5 @@
 local a = game.GameId
-local b = {"595270616"}
+local b = {595270616, 1686265127}
 
 function c(d)
   loadstring(game:HttpGet("https://raw.githubusercontent.com/tatar0071/IonHub.rewrite/main/IonHub/"..d..".lua"))()
