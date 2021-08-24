@@ -43,7 +43,7 @@ function Lib:CreateWindow(name)
 	TopBar.Font = Enum.Font.Nunito
 	TopBar.Text = name
 	TopBar.TextColor3 = Color3.fromRGB(247, 247, 247)
-	TopBar.TextSize = 16.000
+	TopBar.TextSize = 16.0
 	TopBar.TextStrokeColor3 = Color3.fromRGB(50, 50, 50)
 	TopBar.TextWrapped = true
 
@@ -928,7 +928,7 @@ function Lib:CreateWindow(name)
                     ButtonMenuLayout.SortOrder = Enum.SortOrder.LayoutOrder
                     ButtonMenuLayout.Padding = UDim.new(0, 2)
                     ButtonMenuLayout:GetPropertyChangedSignal("AbsoluteContentSize"):Connect(function()
-                        ButtonMenu.Size = UDim2.new(0, ButtonMenuLayout.AbsoluteContentSize.X + 4, 0, ButtonMenuLayout.AbsoluteContentSize.Y + 2)
+                        ButtonMenu.Size = UDim2.new(0, ButtonMenuLayout.AbsoluteContentSize.X + 4, 0, ButtonMenuLayout.AbsoluteContentSize.Y + 4)
                     end)
 
                     MenuButtonInstance.MouseButton1Down:Connect(function()
