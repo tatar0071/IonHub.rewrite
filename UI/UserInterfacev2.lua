@@ -987,6 +987,9 @@ function Lib:CreateWindow(name)
                         ToggleLabel.TextSize = 16.000
                         ToggleLabel.TextXAlignment = Enum.TextXAlignment.Left
                         ToggleLabel.TextYAlignment = Enum.TextYAlignment.Top
+						
+			task.wait()
+			Toggle.Size = UDim2.new(0, ToggleLabel.TextBounds.X + 50, 0, 18)
                         
                         function _Toggle:Set(value,nocallback)
                             if value then
