@@ -716,7 +716,7 @@ function Lib:CreateWindow(name)
                     DropdownLabel.BorderSizePixel = 0
                     DropdownLabel.Size = UDim2.new(1, 0, 0, 18)
                     DropdownLabel.Font = Enum.Font.Nunito
-                    DropdownLabel.Text = "Dropdown"
+                    DropdownLabel.Text = name
                     DropdownLabel.TextColor3 = Color3.fromRGB(225, 225, 225)
                     DropdownLabel.TextSize = 16.000
                     DropdownLabel.TextXAlignment = Enum.TextXAlignment.Left
@@ -1496,7 +1496,7 @@ function Lib:CreateWindow(name)
                         DropdownLabel.BorderSizePixel = 0
                         DropdownLabel.Size = UDim2.new(1, 0, 0, 18)
                         DropdownLabel.Font = Enum.Font.Nunito
-                        DropdownLabel.Text = "Dropdown"
+                        DropdownLabel.Text = name
                         DropdownLabel.TextColor3 = Color3.fromRGB(225, 225, 225)
                         DropdownLabel.TextSize = 16.000
                         DropdownLabel.TextXAlignment = Enum.TextXAlignment.Left
