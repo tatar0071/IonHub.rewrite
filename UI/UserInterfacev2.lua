@@ -567,7 +567,7 @@ function Lib:CreateWindow(name)
                     return _Toggle
                 end
 
-                function GroupBox:AddSlider(name, min, max, default, callback)
+                function GroupBox:AddSlider(name, min, max, default, isrounded, callback)
                     local _Slider = {}
 
                     local SliderValue = default
@@ -643,7 +643,12 @@ function Lib:CreateWindow(name)
                             0,
                             2
                         )
-                        SliderValue = math.clamp(math.floor((pos.X.Scale * max) / max * ((max - min) + min)), min, max)
+                        if isrounded then
+                            SliderValue =
+                                math.clamp(math.floor((pos.X.Scale * max) / max * ((max - min) + min)), min, max)
+                        else
+                            SliderValue = math.clamp((pos.X.Scale * max) / max * ((max - min) + min), min, max)
+                        end
                         SliderText.Text = tostring(SliderValue)
                         callback(SliderValue)
                     end
@@ -1342,7 +1347,7 @@ function Lib:CreateWindow(name)
                         return _Toggle
                     end
 
-                    function _MenuButton:AddSlider(name, min, max, default, callback)
+                    function _MenuButton:AddSlider(name, min, max, default, isrounded, callback)
                         local _Slider = {}
 
                         local SliderValue = default
@@ -1423,8 +1428,12 @@ function Lib:CreateWindow(name)
                                 0,
                                 2
                             )
-                            SliderValue =
-                                math.clamp(math.floor((pos.X.Scale * max) / max * ((max - min) + min)), min, max)
+                            if isrounded then
+                                SliderValue =
+                                    math.clamp(math.floor((pos.X.Scale * max) / max * ((max - min) + min)), min, max)
+                            else
+                                SliderValue = math.clamp((pos.X.Scale * max) / max * ((max - min) + min), min, max)
+                            end
                             SliderText.Text = tostring(SliderValue)
                             callback(SliderValue)
                         end
