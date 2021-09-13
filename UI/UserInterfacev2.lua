@@ -382,9 +382,7 @@ function Lib:CreateWindow(name)
                         end
                         callback(value)
                     end
-                    if default then
-                        _Toggle:Set(default)
-                    end
+                    _Toggle:Set(default)
 
                     function _Toggle:AddColorpicker(default, callback)
                         if typeof(default) ~= "Color3" then
@@ -1151,9 +1149,7 @@ function Lib:CreateWindow(name)
                             end
                             callback(value)
                         end
-                        if default then
-                            _Toggle:Set(default)
-                        end
+                        _Toggle:Set(default)
 
                         function _Toggle:AddColorpicker(default, callback)
                             if typeof(default) ~= "Color3" then
