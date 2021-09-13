@@ -1376,6 +1376,7 @@ function Lib:CreateWindow(name)
                         SliderLabel.Size = UDim2.new(1, 0, 0, 18)
                         SliderLabel.Font = Enum.Font.Nunito
                         SliderLabel.Text = name
+			SliderLabel.Position = UDim2.new(0, 2, 0, 0)
                         SliderLabel.TextColor3 = Color3.fromRGB(225, 225, 225)
                         SliderLabel.TextSize = 16.000
                         SliderLabel.TextXAlignment = Enum.TextXAlignment.Left
@@ -1385,7 +1386,7 @@ function Lib:CreateWindow(name)
                         SliderObject.Parent = Slider
                         SliderObject.BackgroundColor3 = Color3.fromRGB(46, 46, 46)
                         SliderObject.BorderSizePixel = 0
-                        SliderObject.Position = UDim2.new(0, 0, 0, 18)
+                        SliderObject.Position = UDim2.new(0, 2, 0, 18)
                         SliderObject.Size = UDim2.new(0, 150, 0, 18)
 
                         SliderMover.Name = "SliderMover"
