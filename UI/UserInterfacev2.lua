@@ -625,6 +625,9 @@ function Lib:CreateWindow(name)
                     SliderText.TextColor3 = Color3.fromRGB(225, 225, 225)
                     SliderText.TextSize = 14.000
                     local function MoveSlider(inp)
+                        local slidermath =
+                            math.clamp(inp.X - SliderObject.AbsolutePosition.X, 0, SliderObject.AbsoluteSize.X) /
+                            SliderObject.AbsoluteSize.X
                         local pos =
                             UDim2.new(
                             math.clamp((inp.X - SliderObject.AbsolutePosition.X) / SliderObject.AbsoluteSize.X, 0, 1),
@@ -644,10 +647,9 @@ function Lib:CreateWindow(name)
                             2
                         )
                         if isrounded then
-                            SliderValue =
-                                math.clamp(math.floor((pos.X.Scale * max) / max * ((max - min) + min)), min, max)
+                            SliderValue = math.floor(min + ((max - min) * slidermath))
                         else
-                            SliderValue = math.clamp((pos.X.Scale * max) / max * ((max - min) + min), min, max)
+                            SliderValue = min + ((max - min) * slidermath)
                         end
                         SliderText.Text = tostring(SliderValue)
                         callback(SliderValue)
@@ -682,7 +684,7 @@ function Lib:CreateWindow(name)
                         callback(SliderValue)
                     end
                     _Slider:Set(default)
-                    SliderMover.Position = UDim2.new(math.clamp(default / max, 0.01, 0.97), 0, 0, 2)
+                    SliderMover.Position = UDim2.new(math.clamp((default - min) / (max - min), 0.01, 0.97), 0, 0, 2)
 
                     return _Slider
                 end
@@ -1359,12 +1361,12 @@ function Lib:CreateWindow(name)
                         local SliderText = Instance.new("TextLabel")
 
                         Slider.Name = "Slider"
-                        Slider.Parent = ButtonMenu
+                        Slider.Parent = GroupBoxFeaturesBox
                         Slider.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
                         Slider.BorderColor3 = Color3.fromRGB(80, 80, 80)
                         Slider.BorderSizePixel = 0
                         Slider.Position = UDim2.new(0, 0, 0.0569800586, 0)
-                        Slider.Size = UDim2.new(0, 150, 0, 34)
+                        Slider.Size = UDim2.new(1, 0, 0, 34)
 
                         SliderLabel.Name = "SliderLabel"
                         SliderLabel.Parent = Slider
@@ -1374,7 +1376,6 @@ function Lib:CreateWindow(name)
                         SliderLabel.Size = UDim2.new(1, 0, 0, 18)
                         SliderLabel.Font = Enum.Font.Nunito
                         SliderLabel.Text = name
-                        SliderLabel.Position = UDim2.new(0, 2, 0, 0)
                         SliderLabel.TextColor3 = Color3.fromRGB(225, 225, 225)
                         SliderLabel.TextSize = 16.000
                         SliderLabel.TextXAlignment = Enum.TextXAlignment.Left
@@ -1384,7 +1385,7 @@ function Lib:CreateWindow(name)
                         SliderObject.Parent = Slider
                         SliderObject.BackgroundColor3 = Color3.fromRGB(46, 46, 46)
                         SliderObject.BorderSizePixel = 0
-                        SliderObject.Position = UDim2.new(0, 2, 0, 18)
+                        SliderObject.Position = UDim2.new(0, 0, 0, 18)
                         SliderObject.Size = UDim2.new(0, 150, 0, 18)
 
                         SliderMover.Name = "SliderMover"
@@ -1406,6 +1407,9 @@ function Lib:CreateWindow(name)
                         SliderText.TextColor3 = Color3.fromRGB(225, 225, 225)
                         SliderText.TextSize = 14.000
                         local function MoveSlider(inp)
+                            local slidermath =
+                                math.clamp(inp.X - SliderObject.AbsolutePosition.X, 0, SliderObject.AbsoluteSize.X) /
+                                SliderObject.AbsoluteSize.X
                             local pos =
                                 UDim2.new(
                                 math.clamp(
@@ -1429,10 +1433,9 @@ function Lib:CreateWindow(name)
                                 2
                             )
                             if isrounded then
-                                SliderValue =
-                                    math.clamp(math.floor((pos.X.Scale * max) / max * ((max - min) + min)), min, max)
+                                SliderValue = math.floor(min + ((max - min) * slidermath))
                             else
-                                SliderValue = math.clamp((pos.X.Scale * max) / max * ((max - min) + min), min, max)
+                                SliderValue = min + ((max - min) * slidermath)
                             end
                             SliderText.Text = tostring(SliderValue)
                             callback(SliderValue)
@@ -1467,7 +1470,7 @@ function Lib:CreateWindow(name)
                             callback(SliderValue)
                         end
                         _Slider:Set(default)
-                        SliderMover.Position = UDim2.new(math.clamp(default / max, 0.01, 0.97), 0, 0, 2)
+                        SliderMover.Position = UDim2.new(math.clamp((default - min) / (max - min), 0.01, 0.97), 0, 0, 2)
 
                         return _Slider
                     end
