@@ -1013,7 +1013,7 @@ function Lib:CreateWindow(name)
                             ButtonInstance.Size = UDim2.new(0, ButtonInstance.TextBounds.X + 10, 0, 16)
                         end
                     )
-                    task.wait()
+                    wait()
                     ButtonInstance.Size = UDim2.new(0, ButtonInstance.TextBounds.X + 10, 0, 16)
 
                     local ButtonConnection
@@ -1050,7 +1050,7 @@ function Lib:CreateWindow(name)
                             MenuButtonInstance.Size = UDim2.new(0, MenuButtonInstance.TextBounds.X + 10, 0, 16)
                         end
                     )
-                    task.wait()
+                    wait()
                     MenuButtonInstance.Size = UDim2.new(0, MenuButtonInstance.TextBounds.X + 10, 0, 16)
 
                     ButtonMenu.Visible = false
@@ -1138,7 +1138,7 @@ function Lib:CreateWindow(name)
                         ToggleLabel.TextXAlignment = Enum.TextXAlignment.Left
                         ToggleLabel.TextYAlignment = Enum.TextYAlignment.Top
 
-                        task.wait()
+                        wait()
                         Toggle.Size = UDim2.new(0, ToggleLabel.TextBounds.X + 66, 0, 18)
 
                         function _Toggle:Set(value, nocallback)
@@ -1251,7 +1251,7 @@ function Lib:CreateWindow(name)
                             end
                             _Colorpicker:Set(colorHueStore, colorSaturationStore, colorValueStore)
                             repeat
-                                task.wait()
+                                wait()
                             until game:GetService("Players").LocalPlayer
                             local Mouse = game:GetService("Players").LocalPlayer:GetMouse()
 
@@ -1801,7 +1801,7 @@ function Lib:CreateWindow(name)
                                 ButtonInstance.Size = UDim2.new(0, ButtonInstance.TextBounds.X + 10, 0, 16)
                             end
                         )
-                        task.wait()
+                        wait()
                         ButtonInstance.Size = UDim2.new(0, ButtonInstance.TextBounds.X + 10, 0, 16)
 
                         local ButtonConnection
