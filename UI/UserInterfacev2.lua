@@ -582,7 +582,7 @@ function Lib:CreateWindow(name)
                     Slider.BorderColor3 = Color3.fromRGB(80, 80, 80)
                     Slider.BorderSizePixel = 0
                     Slider.Position = UDim2.new(0, 0, 0.0569800586, 0)
-                    Slider.Size = UDim2.new(1, 0, 0, 34)
+                    Slider.Size = UDim2.new(1, 0, 0, 36)
 
                     SliderLabel.Name = "SliderLabel"
                     SliderLabel.Parent = Slider
