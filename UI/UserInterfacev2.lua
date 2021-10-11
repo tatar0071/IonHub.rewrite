@@ -1250,9 +1250,6 @@ function Lib:CreateWindow(name)
                                 callback(color)
                             end
                             _Colorpicker:Set(colorHueStore, colorSaturationStore, colorValueStore)
-                            repeat
-                                wait()
-                            until game:GetService("Players").LocalPlayer
                             local Mouse = game:GetService("Players").LocalPlayer:GetMouse()
 
                             local HueSaturationInput
