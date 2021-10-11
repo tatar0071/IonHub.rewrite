@@ -565,7 +565,7 @@ function Lib:CreateWindow(name)
                     return _Toggle
                 end
 
-                function GroupBox:AddSlider(name, min, max, default, isrounded, callback)
+                function GroupBox:AddSlider(name, min, max, default, isrounded, callback, mrc)
                     local _Slider = {}
 
                     local SliderValue = default
@@ -647,7 +647,7 @@ function Lib:CreateWindow(name)
                         if isrounded then
                             SliderValue = math.floor(min + ((max - min) * slidermath))
                         else
-                            SliderValue = min + ((max - min) * slidermath)
+                            SliderValue = tonumber(string.sub(tostring(min + ((max - min) * slidermath)), 1, mrc)) --4
                         end
                         SliderText.Text = tostring(SliderValue)
                         callback(SliderValue)
@@ -1345,7 +1345,7 @@ function Lib:CreateWindow(name)
                         return _Toggle
                     end
 
-                    function _MenuButton:AddSlider(name, min, max, default, isrounded, callback)
+                    function _MenuButton:AddSlider(name, min, max, default, isrounded, callback, mrc)
                         local _Slider = {}
 
                         local SliderValue = default
@@ -1372,7 +1372,7 @@ function Lib:CreateWindow(name)
                         SliderLabel.Size = UDim2.new(1, 0, 0, 18)
                         SliderLabel.Font = Enum.Font.Nunito
                         SliderLabel.Text = name
-			SliderLabel.Position = UDim2.new(0, 2, 0, 0)
+			            SliderLabel.Position = UDim2.new(0, 2, 0, 0)
                         SliderLabel.TextColor3 = Color3.fromRGB(225, 225, 225)
                         SliderLabel.TextSize = 16.000
                         SliderLabel.TextXAlignment = Enum.TextXAlignment.Left
@@ -1432,7 +1432,7 @@ function Lib:CreateWindow(name)
                             if isrounded then
                                 SliderValue = math.floor(min + ((max - min) * slidermath))
                             else
-                                SliderValue = min + ((max - min) * slidermath)
+                                SliderValue = tonumber(string.sub(tostring(min + ((max - min) * slidermath)), 1, mrc))
                             end
                             SliderText.Text = tostring(SliderValue)
                             callback(SliderValue)
