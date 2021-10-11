@@ -324,6 +324,7 @@ function Lib:CreateWindow(name)
                 GroupBoxLayout.Padding = UDim.new(0, 2)
 
                 function GroupBox:AddToggle(name, default, callback)
+                    spawn(function()
                     local _Toggle = {}
 
                     local isToggled = default
@@ -565,6 +566,7 @@ function Lib:CreateWindow(name)
                     Toggle.Position = UDim2.new(0, 123, 0, 123)
 
                     return _Toggle
+                    end)
                 end
 
                 function GroupBox:AddSlider(name, min, max, default, isrounded, callback, mrc)
