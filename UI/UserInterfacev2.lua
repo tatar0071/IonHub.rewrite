@@ -562,6 +562,8 @@ function Lib:CreateWindow(name)
                         return _Colorpicker
                     end
 
+                    Toggle.Position = UDim2.new(0, 123, 0, 123)
+
                     return _Toggle
                 end
 
@@ -1338,6 +1340,8 @@ function Lib:CreateWindow(name)
 
                             return _Colorpicker
                         end
+
+                        Toggle.Position = UDim2.new(0, 123, 0, 123)
 
                         return _Toggle
                     end
